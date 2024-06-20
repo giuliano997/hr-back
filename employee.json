@@ -1,0 +1,116 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Max Mustermann",
+      "position": "Boss",
+      "department_id": null
+    },
+    {
+      "id": 2,
+      "name": "Anna Schmidt",
+      "position": "Abteilungsleiter",
+      "department_id": 1
+    },
+    {
+      "id": 3,
+      "name": "Bernd Meier",
+      "position": "Abteilungsleiter",
+      "department_id": 2
+    },
+    {
+      "id": 4,
+      "name": "Clara Müller",
+      "position": "Abteilungsleiter",
+      "department_id": 3
+    },
+    {
+      "id": 5,
+      "name": "Daniela Becker",
+      "position": "Mitarbeiter",
+      "department_id": 1
+    },
+    {
+      "id": 6,
+      "name": "Erik Fischer",
+      "position": "Mitarbeiter",
+      "department_id": 1
+    },
+    {
+      "id": 7,
+      "name": "Fiona Weber",
+      "position": "Mitarbeiter",
+      "department_id": 2
+    },
+    {
+      "id": 8,
+      "name": "Gerd Wagner",
+      "position": "Mitarbeiter",
+      "department_id": 2
+    },
+    {
+      "id": 9,
+      "name": "Hannah Braun",
+      "position": "Mitarbeiter",
+      "department_id": 3
+    },
+    {
+      "id": 10,
+      "name": "Ivan Koch",
+      "position": "Mitarbeiter",
+      "department_id": 3
+    }
+  ],
+  "departments": [
+    {
+      "id": 1,
+      "name": "Vertrieb"
+    },
+    {
+      "id": 2,
+      "name": "Entwicklung"
+    },
+    {
+      "id": 3,
+      "name": "Marketing"
+    }
+  ],
+  "hierarchy": [
+    {
+      "supervisor_id": 1,
+      "subordinate_id": 2
+    },
+    {
+      "supervisor_id": 1,
+      "subordinate_id": 3
+    },
+    {
+      "supervisor_id": 1,
+      "subordinate_id": 4
+    },
+    {
+      "supervisor_id": 2,
+      "subordinate_id": 5
+    },
+    {
+      "supervisor_id": 2,
+      "subordinate_id": 6
+    },
+    {
+      "supervisor_id": 3,
+      "subordinate_id": 7
+    },
+    {
+      "supervisor_id": 3,
+      "subordinate_id": 8
+    },
+    {
+      "supervisor_id": 4,
+      "subordinate_id": 9
+    },
+    {
+      "supervisor_id": 4,
+      "subordinate_id": 10
+    }
+  ]
+}
