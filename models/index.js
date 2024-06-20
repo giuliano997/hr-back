@@ -3,6 +3,10 @@ const config = require("../config.json")["development"];
 const sequelize = new Sequelize(config);
 
 const Employee = sequelize.define("Employee", {
+  employeeId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,
