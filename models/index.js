@@ -6,6 +6,8 @@ const Employee = sequelize.define("Employee", {
   employeeId: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
   },
   name: {
     type: DataTypes.STRING,
@@ -18,6 +20,10 @@ const Employee = sequelize.define("Employee", {
   departmentId: {
     type: DataTypes.INTEGER,
     allowNull: true,
+    references: {
+      model: "Departments",
+      key: "id",
+    },
   },
 });
 
@@ -34,7 +40,7 @@ const Hierarchy = sequelize.define("Hierarchy", {
     allowNull: false,
     references: {
       model: Employee,
-      key: "id",
+      key: "employeeId",
     },
   },
   subordinateId: {
@@ -42,7 +48,7 @@ const Hierarchy = sequelize.define("Hierarchy", {
     allowNull: false,
     references: {
       model: Employee,
-      key: "id",
+      key: "employeeId",
     },
   },
 });
@@ -53,7 +59,7 @@ const TimeEntry = sequelize.define("TimeEntry", {
     allowNull: false,
     references: {
       model: Employee,
-      key: "id",
+      key: "employeeId",
     },
   },
   startTime: {
@@ -76,7 +82,7 @@ const LeaveRequest = sequelize.define("LeaveRequest", {
     allowNull: false,
     references: {
       model: Employee,
-      key: "id",
+      key: "employeeId",
     },
   },
   supervisorId: {
@@ -84,7 +90,7 @@ const LeaveRequest = sequelize.define("LeaveRequest", {
     allowNull: false,
     references: {
       model: Employee,
-      key: "id",
+      key: "employeeId",
     },
   },
   startDate: {
